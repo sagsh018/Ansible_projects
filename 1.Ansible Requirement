@@ -1,0 +1,39 @@
+1) Ansible installation requirements -- Python, PIP, and virtual environments
+2) Ansible Course environment setup
+3) Ansible on windows 
+4) Ansible on Mac OS
+5) Ansible on Linux
+6) Validating ansible installation
+
+Ansible Requirements -- Python, PIP, and Virtual environments
+=============================================================
+1) Requirements for installing Ansible
+2) Python 2 versus Python 3  for using Ansible
+3) Options for installing Ansible on different operating systems
+4) PIP, the python package management system and ansible
+5) Python Virtual Environment with ansible.
+
+Ansible is a automation framework written in python language. 
+comparision of installation method
+===================================
+                      Install multiple      User has specific       OS vendor support       upgrade         windows         Mac             Linux
+                      version of ansible    control over ansible    for ansible             path
+                      on same system        version
+=====================================================================================================================================================                     
+1) Pip installed      yes, when using           yes                 Yes/No, PIP             Yes,user        yes, however    yes, this is      Yes
+Ansible through       virtual env.                                  installed pkg would     can upgrade     windows is      preferred
+existing python                                                     typically fall out      via PIP to      not supported   approach acc  
+installation                                                        of supp, but this       release         as a control    to Ansible
+                                                                    very depending on       avialable on    machine             doc
+                                                                    the availability of     PyPI or github
+                                                                    support contract &        
+                                                                    terms conditions    
+
+2) OS specific          No                   No, Ansible version    yes/No, depend on       yes, limited        N/A              N/A              Yes 
+installation of                               defined by the pkg    support contract        to availability
+ansible using yum                               that is avialable                           of pkg
+
+3) Activestate          No                  No, Ansible version     Yes through             yes, limited        No                yes            yes
+python installed                            defined by pkg that     Activestate subject     to availability
+through Activestate                         is avialable            to contract             of pkg
+package manager
