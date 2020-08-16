@@ -1,0 +1,37 @@
+1) In this lecture we are going to do the ansible setup on our ubuntu-c host and it is this setup of ansible we are 
+    going to use throughout this course.
+2) We are going to be using python, Virtual environment and pip to install ansible
+3) Lets bring up the ubuntu-c with same kind of netowrk configuration as mentioned in the previous lecture
+4) We also need to make sure that our dnsmasq server is also up and running as we need it to be running in order to 
+    DNS resolution. So lets bring it up as well
+5) Then after bringing up dnsmasq we will do two ping tests:
+    a) ping dnsmasq
+    b) ping google.com
+    Both of these test should pass
+6) Next thing that we are going to do on ubuntu-c os update the apt in order to bring up the machine with latest 
+    softwares and packages
+    # sudo apt-get update
+7) After updating we will install below packages
+    # sudo apt-get install python-minimal virtualenv python-dev build-essential
+8) Then lets create our first virtaul environment using python under /home/packt home directory
+    # virtualenv venv27
+9) Then lets activate the virtual environment with below command
+    # source venv27/bin/activate
+    and this will change the prompt and it will become like below
+    packt@ubuntu-c:~$ source venv27/bin/activate
+    (venv27) packt@ubuntu-c:~$
+10 Check the python and pip, both should come from within the virtualenv
+    which python
+    which pip
+    ========================================
+    (venv27) packt@ubuntu-c:~$ which python
+`   /home/packt/venv27/bin/python
+    (venv27) packt@ubuntu-c:~$ which pip
+    /home/packt/venv27/bin/pip
+    ========================================
+11) Now before installing ansible we are going to set our version of setup tools at version 45 for compatibility 
+    # pip install --upgrade 'setuptools<45.0.0'
+12) Then we will finally install ansible using pip
+    # pip install ansible==2.5.0
+13) Then we can check the ansible version 
+    # ansible --version
