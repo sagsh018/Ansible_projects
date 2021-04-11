@@ -1,0 +1,2 @@
+target_1 ansible_host=target_1 ansible_ssh_pass=brDSLsd
+target_2 ansible_host=target_2 ansible_ssh_pass=brDSLsd
