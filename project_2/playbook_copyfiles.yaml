@@ -1,0 +1,12 @@
+-
+  name: Copy files to target machines
+  hosts: all
+  tasks:
+    -
+      name: copy files to target
+      copy:
+        src: /tmp/sample.txt
+        dest: /tmp/sample.txt
+        owner: root
+        group: root
+        mode: u=rw,g=r,o=r
