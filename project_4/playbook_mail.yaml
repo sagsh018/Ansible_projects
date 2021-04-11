@@ -1,0 +1,17 @@
+-
+  name: 'Sending Email if httpd is not started'
+  hosts: target_1
+  tasks:
+    -
+      name: 'Checking httpd service status'
+      command: 'systemctl status httpd'
+      register: result
+    -
+      name: 'Sending email if httpd not started'
+      main:
+        to: ss0315345@gmail.com
+        subject: HTTPD is Down
+        body: Httpd service seems Down
+
+      when:
+        result.stdout.find('down') != -1
