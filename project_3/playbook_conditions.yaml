@@ -1,18 +1,18 @@
 -
   name: 'Installing NGINX'
-  hosts: all
+  hosts: target_1
   tasks:
     -
-      name: 'Installing NGINX on Debian'
+      name: 'Installing httpd on Debian'
       apt:
-        name: nginx 
+        name: httpd 
         state: present
       when:
         ansible_os_family == "debian"
     -
-      name: 'Installing NGINX on Redhat'
+      name: 'Installing httpd on Redhat'
       yum:
-        name: nginx
+        name: httpd
         state: present
       when: 
         ansible_os_family == "RedHat"
